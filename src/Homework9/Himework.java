@@ -9,6 +9,6 @@ public class Himework {
         System.out.println(book1.getName() + " == " + book1.getAuthor().getName() + " " + book1.getAuthor().getSurname() + " == " + book1.getAge());
         System.out.println(book2.getName() + " == " + book2.getAuthor().getName() + " " + book2.getAuthor().getSurname() + " == " + book2.getAge());
         book1.setAge(2018);
-        System.out.println("Год издания Ведьмака изменён на - " + book1.getAge());
+        System.out.println(" Год издания Ведьмака изменён на - " + book1.getAge());
     }
 }
