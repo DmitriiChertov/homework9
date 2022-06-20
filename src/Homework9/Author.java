@@ -19,13 +19,16 @@ public class Author {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) return true;
-
-        Author ob = (Author) obj;
-        if (this.name == ob.getName() && (this.surname == ob.getSurname()))
-            return true;
-        else
+        if (this == obj){ return true;}
+        else if (this == null) {
             return false;
+        }
+        Author ob = (Author) obj;
+        if (this.name.equals(ob.getName()) && (this.surname.equals(ob.getSurname()))) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override

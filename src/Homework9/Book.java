@@ -30,12 +30,18 @@ public class Book {
     @Override
 
     public boolean equals(Object obj) {
-        if (this == obj)  return true;
-        Book ob = (Book) obj;
-        if ((this.name == ob.getName() && this.age == ob.getAge()) && (this.author.equals(ob.getAuthor())))
+        if (this == obj) {
             return true;
-        else
+        }
+        Book ob = (Book) obj;
+        if ((this.name == ob.getName() && this.age == ob.getAge()) && (this.author.equals(ob.getAuthor()))) {
+
+            return true;
+        } else if (this == null) {
             return false;
+        } else {
+            return false;
+        }
     }
 
     @Override
@@ -44,6 +50,6 @@ public class Book {
     }
     @Override
     public String toString() {
-        return "Название книги:  " + this.name + "; " + " Год издания: " + this.age + "; ";
+        return this.author + "Название книги:  " + this.name + "; " + " Год издания: " + this.age + "; ";
     }
 }
