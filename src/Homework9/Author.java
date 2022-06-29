@@ -20,7 +20,7 @@ public class Author {
     @Override
     public boolean equals(Object obj) {
         if (this == obj){ return true;}
-        else if (this == null) {
+        else if (obj == null) {
             return false;
         }
         Author ob = (Author) obj;

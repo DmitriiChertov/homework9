@@ -5,13 +5,14 @@ public class Book {
     private Author author;
     private int age;
 
-    public Book(String name, Author author ,int age) {
+    public Book(String name, Author author, int age) {
         this.name = name;
         this.author = author;
         this.age = age;
     }
 
-    public String getName()  {
+
+    public String getName() {
         return this.name;
     }
 
@@ -28,28 +29,21 @@ public class Book {
     }
 
     @Override
+    public String toString() {
+        return this.author + "Название книги:  " + this.name + "; " + " Год издания: " + this.age + "; ";
+    }
 
+    @Override
     public boolean equals(Object obj) {
+        Book ob = (Book) obj;
         if (this == obj) {
             return true;
-        }
-        Book ob = (Book) obj;
-        if ((this.name == ob.getName() && this.age == ob.getAge()) && (this.author.equals(ob.getAuthor()))) {
-
-            return true;
-        } else if (this == null) {
+        } else if (obj == null) {
             return false;
+        } else if (this.name.equals(ob.getName()) && this.author.equals(getAuthor()) && age == ob.getAge()) {
+            return true;
         } else {
             return false;
         }
-    }
-
-    @Override
-    public int hashCode() {
-        return this.name.hashCode() + this.age;
-    }
-    @Override
-    public String toString() {
-        return this.author + "Название книги:  " + this.name + "; " + " Год издания: " + this.age + "; ";
     }
 }
