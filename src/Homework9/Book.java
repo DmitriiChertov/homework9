@@ -1,5 +1,7 @@
 package Homework9;
 
+import java.util.Objects;
+
 public class Book {
     private String name;
     private Author author;
@@ -34,16 +36,15 @@ public class Book {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        Book ob = (Book) obj;
-        if (this == obj) {
-            return true;
-        } else if (obj == null|| getClass() != obj.getClass()) {
-            return false;
-        } else if (this.name.equals(ob.getName()) && this.author.equals(getAuthor()) && age == ob.getAge()) {
-            return true;
-        } else {
-            return false;
-        }
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return age == book.age && Objects.equals(name, book.name) && Objects.equals(author, book.author);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, author, age);
     }
 }
