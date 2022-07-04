@@ -18,5 +18,7 @@ public class Himework {
         System.out.println(book4.toString() + "Hash Code: " + book4.hashCode()+ ";");
         System.out.println(book1.equals(book2));
         System.out.println(book1.equals(book4));
+        System.out.println(author1.equals(book1));
+        System.out.println(book1.equals(book4));
     }
 }
