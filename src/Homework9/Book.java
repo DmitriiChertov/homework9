@@ -38,7 +38,7 @@ public class Book {
         Book ob = (Book) obj;
         if (this == obj) {
             return true;
-        } else if (obj == null) {
+        } else if (obj == null|| getClass() != obj.getClass()) {
             return false;
         } else if (this.name.equals(ob.getName()) && this.author.equals(getAuthor()) && age == ob.getAge()) {
             return true;
